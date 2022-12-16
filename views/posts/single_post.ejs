@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Blog</title>
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <!-- Include navbar -->
+    <%- include('../components/navbar') %>
+
+    <section class="blog">
+      <div class="container">
+        <div>
+          <h1 style="font-weight: bolder; color:teal">
+            <%= blog.title %>
+          </h1>
+        </div>
+        <section>
+          <div class="blog__img" style="width:20%; height:10%; float:left;margin-right:10%;" >
+            <img height="200px" width="10px" src="/static/images/<%= blog.image %>" alt="" />
+          </div>
+          <div class="blog__info">
+            <span style="font-weight: bolder">Author : <%= blog.user.name %></span> &nbsp;&nbsp;&nbsp;&nbsp;
+            <br><a href="/likes/like?q=<%= blog.id %>" style="text-decoration: none;color:inherit;"> <i class="fa fa-thumbs-o-up"> </i> </a> 
+            <span><%= blog.likes %></span>
+            <br /><span><%= blog.date.toString() %></span>
+          </div>
+      </section>
+        <br/><br>
+        <div class="blog__content"><%= blog.body %></div>
+      </div>
+    </section>
+    <br><br>
+
+    <%- include('../components/footer') %>
+
+    <!-- CUSTOM JS -->
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>
