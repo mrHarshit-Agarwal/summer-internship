@@ -24,7 +24,7 @@ const { compare } = require("bcryptjs");
 const app = express();
 // Database Connection
 
-  const url = process.env.MONGO_URI || `mongodb+srv://harshit:harshitdb@cluster0.uzh6tig.mongodb.net/test`;
+  const url = process.env.MONGO_URI || `mongodb+srv://`;
 
 const connectionParams={
     useNewUrlParser: true,

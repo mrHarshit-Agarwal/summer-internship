@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const url = process.env.MONGO_URI || `mongodb+srv://harshit:harshitdb@cluster0.k4ief.mongodb.net/?retryWrites=true&w=majority`;
+const url = process.env.MONGO_URI || `mongodb+srv://`;
 
 const connectionParams={
     useNewUrlParser: true,

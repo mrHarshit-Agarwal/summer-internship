@@ -1,5 +1,5 @@
 module.exports = myUrl = {
-  mongoDB:process.env.MONGO_URI || "mongodb+srv://harshit:harshitdb@cluster0.uzh6tig.mongodb.net/test",
+  mongoDB:process.env.MONGO_URI || "mongodb+srv://",
   // mongoDB:
-  // mongodb+srv://harshit:<password>@cluster0.uzh6tig.mongodb.net/test
+  // mongodb+srv://user:<password>@cluster0.uzh6tig.mongodb.net/test
 };
